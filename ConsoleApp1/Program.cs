@@ -1,39 +1,30 @@
-﻿// Task 1
+﻿
+// Task 1
+//Random random = new Random();
 
-//string result = null;
+//int[] random_arr = new int[10];
 
-//Console.WriteLine("Please Enter string value and click enter: ");
-//for (int i = 0; i < 3; i++)
-//{
-//    string? value = Console.ReadLine();
-//    result += value;
-//}
+//for (int i = 0; i < random_arr.Length; i++)
+//    random_arr[i] = random.Next(0, 100);
 
-//Console.WriteLine(result);
-
+//foreach(int num in random_arr)
+//    Console.Write(num + ", ");
 
 // Task 2
+//int[] numbers = new int[] { 1,3,5 };
 
-//Console.Write("Enter your name: ");
-//string name = Console.ReadLine();
+//Console.Write("Please Enter The Number: ");
+//string? str_number = Console.ReadLine();
+//int number = int.Parse(str_number);
 
-//Console.Write("Enter your surname: ");
-//string surname = Console.ReadLine();
+//bool check = true;
 
-//Console.WriteLine($"Name: {name}, Surname: {surname}");
+//for (int i = 0;i < numbers.Length;i++)
+//    if (numbers[i] == number)
+//    {
+//        Console.WriteLine(numbers[i]);
+//        check = false;
+//    }
 
-
-// Task 3
-
-//Console.WriteLine("--- Beraber Yanli Duzbucaq ---");
-
-//Console.Write("En Daxil edin: ");
-//uint en = uint.Parse(Console.ReadLine());
-
-//Console.Write("Uzunluq daxil edin: ");
-//uint uzunluq = uint.Parse(Console.ReadLine());
-
-//uint perimetr = 2 * (en + uzunluq);
-//uint sahe = en * uzunluq;
-
-//Console.WriteLine($"PERIMETR: {perimetr}, SAHE: {sahe}");
+//if (check)
+//    Console.WriteLine("Mövcud deyil");
