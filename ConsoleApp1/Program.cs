@@ -1,30 +1,82 @@
-﻿
-// Task 1
+﻿//Task1
+
+//for (int i = 0; i < 1000; i++)
+//{
+//    if (i % 3 == 0 && i % 5 == 0)
+//        Console.WriteLine(i);
+//}
+
+
+//Task2
+
+//int result = int.Parse(Console.ReadLine());
+//for (int i = 0; i < result; i++)
+//{
+//    Random random = new Random();
+//    int random_num = random.Next(0, 100);
+//    Console.WriteLine(random_num);
+//}
+
+
+//Task3
+
+//*
+//**
+//***
+//****
+//*****
+
+//for (int i = 1; i < 5; i++)
+//{
+//    for (int j = 0; j < i; j++)
+//    {
+//        Console.Write("*");
+//    }
+//    Console.WriteLine();
+//}
+
+
+//Task4
+
 //Random random = new Random();
 
-//int[] random_arr = new int[10];
+//int result = int.Parse(Console.ReadLine());
 
-//for (int i = 0; i < random_arr.Length; i++)
+//int[] random_arr = new int[result];
+
+//for (int i = 0; i < result; i++)
 //    random_arr[i] = random.Next(0, 100);
 
-//foreach(int num in random_arr)
-//    Console.Write(num + ", ");
 
-// Task 2
-//int[] numbers = new int[] { 1,3,5 };
+//Console.Write("Cut ededler: ");
 
-//Console.Write("Please Enter The Number: ");
-//string? str_number = Console.ReadLine();
-//int number = int.Parse(str_number);
+//for (int i = 0; i < result; i++)
+//{
+//    if (random_arr[i] % 2 == 0)
+//        Console.Write(random_arr[i] + ", ");
+//}
 
-//bool check = true;
+//Console.WriteLine();
 
-//for (int i = 0;i < numbers.Length;i++)
-//    if (numbers[i] == number)
-//    {
-//        Console.WriteLine(numbers[i]);
-//        check = false;
-//    }
+//Console.Write("Tek ededler: ");
 
-//if (check)
-//    Console.WriteLine("Mövcud deyil");
+//for (int i = 0; i < result; i++)
+//{
+//    if (random_arr[i] % 2 != 0 && random_arr[i] != 2)
+//        Console.Write(random_arr[i] + ", ");
+//}
+
+
+//Task 5
+
+//while(true)
+//{
+//    Console.Write("Enter the number 1: ");
+//    int num1 = int.Parse(Console.ReadLine());
+//    Console.WriteLine();
+//    Console.Write("Enter the number 2: ");
+//    int num2 = int.Parse(Console.ReadLine());
+
+//    if ((num1 + num2) % 6 == 0)
+//        break;
+//}
