@@ -1,82 +1,98 @@
-﻿//Task1
+﻿
+using ConsoleApp1;
 
-//for (int i = 0; i < 1000; i++)
-//{
-//    if (i % 3 == 0 && i % 5 == 0)
-//        Console.WriteLine(i);
-//}
+Bank user1 = new Bank(500, 1629);
 
+int wrongPassCount = 0;
 
-//Task2
+while (true)
+{
+    Console.Write("Enter your password: ");
+    int userPassword = int.Parse(Console.ReadLine());
 
-//int result = int.Parse(Console.ReadLine());
-//for (int i = 0; i < result; i++)
-//{
-//    Random random = new Random();
-//    int random_num = random.Next(0, 100);
-//    Console.WriteLine(random_num);
-//}
+    if (userPassword == user1.Password)
+    {
+        Console.WriteLine("Password correct. Welcome!");
+        break;
+    }
+    else
+    {
+        wrongPassCount++;
+        Console.WriteLine($"Incorrect password. {3 - wrongPassCount}");
 
+        if (wrongPassCount >= 3)
+        {
+            Console.WriteLine("Too many incorrect attempts. Exiting program.");
+            return;
+        }
+    }
+}
 
-//Task3
+while (true)
+{
+    int value = Functions.MainMenu();
 
-//*
-//**
-//***
-//****
-//*****
+    switch (value)
+    {
+        case 1:
+            Console.WriteLine(user1.Balance);
 
-//for (int i = 1; i < 5; i++)
-//{
-//    for (int j = 0; j < i; j++)
-//    {
-//        Console.Write("*");
-//    }
-//    Console.WriteLine();
-//}
+            Console.Write("Press 0 to return to the list: ");
+            if (Console.ReadLine() == "0")
+            {
+                Console.Clear();
+                continue;
+            }
+            break;
+        case 2:
+            try
+            {
+                Console.Write("Pulun miqdarini daxil edin: ");
+                int addBalance = int.Parse(Console.ReadLine());
 
+                user1.AddBalance(addBalance);
 
-//Task4
+                Console.Write("Press 0 to return to the list: ");
+                if (Console.ReadLine() == "0")
+                {
+                    Console.Clear();
+                    continue;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Clear();
+                Console.WriteLine(ex.Message);
+                continue;
+            }
+            break;
+        case 3:
+            try
+            {
+                Console.Write("Pulun miqdarini daxil edin: ");
+                int removeBalance = int.Parse(Console.ReadLine());
 
-//Random random = new Random();
+                user1.RemoveBalance(removeBalance);
 
-//int result = int.Parse(Console.ReadLine());
-
-//int[] random_arr = new int[result];
-
-//for (int i = 0; i < result; i++)
-//    random_arr[i] = random.Next(0, 100);
-
-
-//Console.Write("Cut ededler: ");
-
-//for (int i = 0; i < result; i++)
-//{
-//    if (random_arr[i] % 2 == 0)
-//        Console.Write(random_arr[i] + ", ");
-//}
-
-//Console.WriteLine();
-
-//Console.Write("Tek ededler: ");
-
-//for (int i = 0; i < result; i++)
-//{
-//    if (random_arr[i] % 2 != 0 && random_arr[i] != 2)
-//        Console.Write(random_arr[i] + ", ");
-//}
-
-
-//Task 5
-
-//while(true)
-//{
-//    Console.Write("Enter the number 1: ");
-//    int num1 = int.Parse(Console.ReadLine());
-//    Console.WriteLine();
-//    Console.Write("Enter the number 2: ");
-//    int num2 = int.Parse(Console.ReadLine());
-
-//    if ((num1 + num2) % 6 == 0)
-//        break;
-//}
+                Console.Write("Press 0 to return to the list: ");
+                if (Console.ReadLine() == "0")
+                {
+                    Console.Clear();
+                    continue;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Clear();
+                Console.WriteLine(ex.Message);
+                continue;
+            }
+            break;
+        case 4:
+            Console.Clear();
+            return;
+        default:
+            Console.WriteLine("Please enter the correct value. ");
+            break;
+    }
+}
